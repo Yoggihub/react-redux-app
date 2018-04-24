@@ -1,7 +1,10 @@
 {
   "name": "react-redux-app",
   "version": "0.1.0",
+  "description": "Some basic ReactJS and Redu course",
   "private": true,
+  "author": "Yoggi",
+  "license": "MIT",
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
