@@ -28,6 +28,7 @@ class Posts extends Component {
 
     componentWillMount() {
         // fetchPosts will get placed in props
+        console.log('Inside componentWillMount with props ', this.props);
         this.props.fetchPosts();
     }
 
@@ -50,14 +51,20 @@ class Posts extends Component {
 
 Posts.propTypes = {
     fetchPosts: PropTypes.func.isRequired,
-    posts: PropTypes.array.isRequired,
+    posts: PropTypes.array.isRequired
 }
 
 // get the new items from the state. Get the state from redux and map it to properties of component so we can use it inside our component
-const mapStateToProps = state => ({
-    //use what is been used in root reducer. put the items from state to posts property
-    //Mapped the items from the state to props property
-    posts: state.posts.items
-})
+// const mapStateToProps = state => ({
+//     //use what is been used in root reducer. put the items from state to posts property
+//     //Mapped the items from the state to props property
+//     posts: state.posts.items
+// })
+const mapSTP = state => {
+    console.log('Inside mapStateToProps with state ', state);
+    return {
+        posts: state.posts.items
+    }
+}
 //Connects a React component to a Redux store
-export default connect(mapStateToProps, { fetchPosts }) (Posts)
+export default connect(mapSTP, { fetchPosts }) (Posts)

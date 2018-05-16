@@ -16,6 +16,7 @@ import store from './store';
 // const store = createStore(() => [], {}, applyMiddleware());
 class App extends Component {
   render() {
+    console.log('Inside App.js with store', store)
     return (
       <Provider store={ store }>
       <div className="App">

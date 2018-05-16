@@ -19,7 +19,7 @@ const middleware = [thunk];
 
 // setup the redux to see the state = https://github.com/zalmoxisus/redux-devtools-extension#usage
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
+console.log('Inside store with initialState ', initialState)
 const store = createStore(
      rootReducer,
      initialState,
